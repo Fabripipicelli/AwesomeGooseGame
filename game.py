@@ -84,7 +84,10 @@ class Game:
     
     def get_winner(self) -> Optional[str]:
         """Returns None (if the game is not over) or the name of the winner"""
-        return None
+        winner = None
+        if self.is_over():
+            winner = self.current_player
+        return winner
     
     
     
